@@ -1,9 +1,16 @@
 @echo off
-echo Sei sicuro di voler continuare?
-echo Premi invio se hai python installato nel PC
+echo Benvenuto, questo programma ti permette di scrivere in qualsiasi linguaggio di programmazione.
+echo Scrivi al creatore su instagram (@dani26_yt) per riportare dei bug
+Pause
 :menu
-cls
+echo Premi invio se hai python installato nel PC.
+echo Se non sai se hai python installato esegui python.exe o vai sotto c:\windows e cerca py.exe
+echo Se c'è hai python installato se no installalo
+pause
+
+:menu
 echo Seleziona un linguaggio di programmazione:
+echo 0. Installa Python
 echo 1. Mostra la data e l'ora
 echo 2. Esci
 echo 3. C++
@@ -31,7 +38,14 @@ Echo 23. Help Command
 
 set /p choice=Scelta: 
 
-if "%choice%"=="1" (
+if "%choice%"=="0" (
+    echo l'installazione di python occuperà 300mb
+    pause
+    echo installazione di Python in corso
+    pause
+    cd Programmi
+    Python.exe
+) else if "%choice%"=="1" (
     echo La data e l'ora correnti sono: %date% %time%
     pause
     goto menu
